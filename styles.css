@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96c93d);
+  background-image: linear-gradient(135deg, #5A2653, #0A084D, #8E584C, #132833);
   background-size: 400%;
   animation: gradientAnimation 15s ease infinite;
 }
@@ -28,13 +28,32 @@ body {
 }
 
 .quiz-container {
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #6200ff, #ae00ff, #cc00ff, #ff0000);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
   text-align: center;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+.quiz-container:hover{
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 h1 {
@@ -87,7 +106,11 @@ h1 {
 }
 
 .option:hover {
-  background-color: #d0d0d0;
+  background-color: #38ff38;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .option.selected {
@@ -109,7 +132,11 @@ button#next {
 }
 
 button#next:hover {
-  background-color: #45a049;
+  background-color: #00ff0d;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 button#next:focus {
